@@ -8,7 +8,4 @@ def calculateString(params):
     elif len(numbers) == 2:
         return numbers[0] + numbers[1]
     else:
-        result = 0
-        for number in numbers:
-            result += number
-        return result
+        return sum(numbers)
