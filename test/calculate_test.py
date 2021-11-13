@@ -30,3 +30,7 @@ def test_delimiter():
     assert calculateString("//:\n1:5") == 6
     assert calculateString("///\n2/5") == 7
     assert calculateString("//abc\n2abc5") == 7
+
+def test_negative_number():
+	with pytest.raises(Exception, match = r'negatives not allowed -1,-2'):
+		calculateString("1,2,3,-1,-2")
