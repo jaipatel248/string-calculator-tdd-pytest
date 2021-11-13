@@ -5,5 +5,10 @@ def calculateString(params):
     numbers = list(map(int, splittedString))
     if len(numbers) == 1:
         return numbers[0]
-    else:
+    elif len(numbers) == 2:
         return numbers[0] + numbers[1]
+    else:
+        result = 0
+        for number in numbers:
+            result += number
+        return result
