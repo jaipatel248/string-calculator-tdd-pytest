@@ -1,8 +1,5 @@
 import re
-
-def calculateString(params):
-    if len(params) == 0:
-        return 0
+def getNumberList(params):
     delimeters = ",|\n"
     startIndex = 0
     if params.startswith('//'):
@@ -10,5 +7,10 @@ def calculateString(params):
         delimeters = delimeters + "|" + params[2:startIndex]
         startIndex += 1
     splittedString = re.split(delimeters,params[startIndex:])
-    numbers = list(map(int, splittedString))
+    return list(map(int, splittedString))
+
+def calculateString(params):
+    if len(params) == 0:
+        return 0
+    numbers = getNumberList(params)
     return sum(numbers)
