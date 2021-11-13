@@ -24,3 +24,9 @@ def test_new_line():
 def test_new_line_and_comma():
     assert calculateString("1\n2,3") == 6
     assert calculateString("1\n2,3\n4") == 10
+
+def test_delimiter():
+    assert calculateString("//;\n1;2") == 3
+    assert calculateString("//:\n1:5") == 6
+    assert calculateString("///\n2/5") == 7
+    assert calculateString("//abc\n2abc5") == 7
