@@ -20,3 +20,7 @@ def test_multiple_numbers():
 def test_new_line():
     assert calculateString("1\n2\n3") == 6
     assert calculateString("1\n2\n3\n4") == 10
+
+def test_new_line_and_comma():
+    assert calculateString("1\n2,3") == 6
+    assert calculateString("1\n2,3\n4") == 10
