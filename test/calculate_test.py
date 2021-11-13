@@ -12,3 +12,7 @@ def test_single_number():
 def test_two_numbers():
     assert calculateString("1,2") == 3
     assert calculateString("12,34") == 46
+
+def test_multiple_numbers():
+    assert calculateString("1,2,3") == 6
+    assert calculateString("5,6,7,8,9") == 45
