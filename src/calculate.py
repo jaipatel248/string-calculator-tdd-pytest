@@ -1,2 +1,2 @@
 def calculateString(params):
-    pass
+    return 0
