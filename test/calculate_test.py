@@ -42,4 +42,7 @@ def test_negative_number_with_delimiter():
 def test_negative_number_with_new_line():
     with pytest.raises(Exception, match = r'negatives not allowed -1,-2'):
         calculateString("1\n2\n3,-1,-2")
-        
+
+def test_negative_number_with_new_line_and_delimiter():
+    with pytest.raises(Exception, match = r'negatives not allowed -1,-2'):
+        calculateString("//;\n1;2,-1,-2")
