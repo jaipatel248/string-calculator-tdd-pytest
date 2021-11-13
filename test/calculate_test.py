@@ -15,4 +15,4 @@ def test_two_numbers():
 
 def test_multiple_numbers():
     assert calculateString("1,2,3") == 6
-    assert calculateString("5,6,7,8,9") == 45
+    assert calculateString("5,6,7,8,9") == 35
